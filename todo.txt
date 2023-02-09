@@ -1,0 +1,5 @@
+1. Handle metadata persistence (file -> list of piece cids mapping)
+2. Wrap in a dockerfile for deployment
+3. Calculate commp
+4. Explore other car-generation tools <-- make it easier to swap them in
+5. Optimise some of the code -- nested for loops very bad very bad
