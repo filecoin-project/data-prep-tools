@@ -3,3 +3,4 @@
 3. Calculate commp
 4. Explore other car-generation tools <-- make it easier to swap them in
 5. Optimise some of the code -- nested for loops very bad very bad
+6. Better error handling
