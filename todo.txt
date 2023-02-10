@@ -1,4 +1,0 @@
-1. Wrap in a dockerfile for deployment
-2. Better error handling
-3. Add readme
-4. Perf testing
