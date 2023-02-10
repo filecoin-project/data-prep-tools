@@ -27,7 +27,7 @@ echo
 find_small_files $SIZE | xargs -I {} bash -c "generate_car {}"
 
 # Generate car files for large files
-find_partial_files | xargs -I {} bash -c "generate_car {}" 
+find_partial_files $SIZE | xargs -I {} bash -c "generate_car {}" 
 
 echo "Finished processing files"
 
