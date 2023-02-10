@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-PARTIAL_FILE_SUFFIX="_part__"
+export PARTIAL_FILE_SUFFIX="_part__"
 
 split_large_files() {
   SIZE=$1
@@ -13,3 +13,11 @@ find_partial_files() {
   SIZE=$1
   find . -type f -size ${SIZE} -name "*${PARTIAL_FILE_SUFFIX}*"
 }
+
+get_parent_file() {
+  FILE=$1
+  echo $FILE | sed "s/.car$//" | sed "s/$PARTIAL_FILE_SUFFIX[0-9]\{5\}$//"
+}
+
+export -f get_parent_file
+

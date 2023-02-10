@@ -26,3 +26,7 @@ find_large_files() {
   LARGER_THAN="+"
   find_files ${LARGER_THAN}${SIZE}
 }
+
+find_car_files() {
+  find . -type f -name "*.car"
+}
