@@ -12,6 +12,8 @@ DATADIR=$1
 SIZE=$2
 WORKDIR=$(pwd)
 
+CAR_GENERATOR="ipld_go_car"
+
 chdir $DATADIR
 
 echo "Starting processing files"
@@ -24,10 +26,10 @@ echo "Done splitting large files"
 echo
 
 # Generate car files for small files
-find_small_files $SIZE | xargs -I {} bash -c "generate_car {}"
+find_small_files $SIZE | xargs -I {} bash -c "${CAR_GENERATOR} {}"
 
 # Generate car files for large files
-find_partial_files $SIZE | xargs -I {} bash -c "generate_car {}" 
+find_partial_files $SIZE | xargs -I {} bash -c "${CAR_GENERATOR} {}" 
 
 echo "Finished processing files"
 
