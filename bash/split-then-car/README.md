@@ -1,6 +1,6 @@
 # data-preparation-tool
 
-The script `data_preparer.sh`, splits large files into smaller chunks, generates CAR files, calculates commP and then persists metadata into a csv.
+The script `split-then-car.sh`, splits large files into smaller chunks, generates CAR files, calculates commP and then persists metadata into a csv.
 It does so in the following order:
 
   1. Splits large files into smaller chunks.
@@ -19,13 +19,13 @@ This method requires your preferred car generator, for example
 [stream-commp](https://github.com/filecoin-project/go-fil-commp-hashhash/tree/master/cmd/stream-commp)
 to be installed and in path.
 
-The `data_preparer.sh` script is the main driver script. It takes two arguments -- the
+The `split-then-car.sh` script is the main driver script. It takes two arguments -- the
 directory where the raw data is hosted, and the preferred size of chunks. 
 
 You can run the script using the command below.
 
 ```shell
-/path/to/data_preparer.sh <data folder> <size, for example 1G>
+/path/to/split-then-car.sh <data folder> <size, for example 1G>
 ```
 ### Using docker 
 
@@ -34,21 +34,20 @@ installed. To build the image, from the project directory, run the docker build 
 below.
 
 ```shell
-docker build -t data-prep-tool .
+docker build -t split-then-car .
 ```
-Once completed, you should see a new image created named data-prep-tool.
+Once completed, you should see a new image created named split-then-car.
 ```shell
 docker images
 REPOSITORY    TAG       IMAGE ID       CREATED       SIZE
-data-prep-tool       latest    84812c960e53   8 seconds ago   1.06GB
+split-then-car       latest    84812c960e53   8 seconds ago   1.06GB
 ```
 
 To prepare data, run the following command.
 ```shell
-docker run -v /Users/anjor/repos/anjor/data_preparation_tool/data:/data data-prep-tool /bin/data_preparer.sh /data 2G
+docker run -v /Users/anjor/repos/anjor/data_preparation_tool/data:/data split-then-car /bin/split-then-car.sh /data 2G
 ```
 
 this mounts the local directory `/Users/anjor/repos/data_preparation_tool/data` to `/data`
-on the container. Then it runs the `data_preparer.sh` script as outlined in the previous section.
-
+on the container. Then it runs the `split-then-car.sh` script as outlined in the previous section.
 
