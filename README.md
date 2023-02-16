@@ -4,9 +4,11 @@ These are a bunch of tools that could be used to prepare data in order to store 
 
 They are organised according to the implementation language -- shell scripts are in `bash` etc.
 
-# Bash
+## Bash
 
 - [split-then-car](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/split-then-car)
+- [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/car-then-split)
+
 
 
 ## Other tools in the ecosystem

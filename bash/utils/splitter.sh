@@ -14,10 +14,10 @@ find_partial_files() {
   find . -type f -size ${SIZE} -name "*${PARTIAL_FILE_SUFFIX}*"
 }
 
-get_parent_file() {
-  FILE=$1
-  echo $FILE | sed "s/.car$//" | sed "s/$PARTIAL_FILE_SUFFIX[0-9]\{5\}$//"
-}
-
-export -f get_parent_file
+#get_parent_file() {
+#  FILE=$1
+#  echo $FILE | sed "s/.car$//" | sed "s/$PARTIAL_FILE_SUFFIX[0-9]\{5\}$//"
+#}
+#
+#export -f get_parent_file
 

@@ -4,7 +4,7 @@
 
 source ../utils/file_utils.sh
 source ../utils/splitter.sh
-source ../utils/car_generators.sh
+source ../utils/car_utils.sh
 source ../utils/deal_param_utils.sh
 
 ## Main flow
@@ -37,7 +37,7 @@ echo
 
 # Calculate commP for all car files
 echo "Calculating CommP for all files and writing them out to "$METADATA_FILE
-find_car_files | xargs -I {} bash -c "run_stream_commp {}" > "$METADATA_FILE"
+find_all_car_files | xargs -I {} bash -c "run_stream_commp {}" > "$METADATA_FILE"
 
 echo "Finished processing files"
 
