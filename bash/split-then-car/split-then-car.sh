@@ -3,9 +3,10 @@
 # Source helper functions
 
 source ../utils/file_utils.sh
-source ../utils/splitter.sh
 source ../utils/car_utils.sh
 source ../utils/deal_param_utils.sh
+
+source splitter.sh
 
 ## Main flow
 

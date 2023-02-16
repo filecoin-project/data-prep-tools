@@ -14,10 +14,6 @@ find_files() {
   find . -type f -size ${SMALL_OR_LARGE}${SIZE}
 }
 
-find_all_files() {
-  find . -type f
-}
-
 # Public functions to find small/large files
 find_small_files() {
   SIZE=$1
@@ -35,9 +31,8 @@ find_all_car_files() {
   find . -type f -name "*.car" 
 }
 
-find_small_car_files() {
+find_large_car_files() {
   SIZE=$1
-  find . -type f -name "*.car" -size "-"$SIZE
+  find . -type f -size "+"${SIZE} -name "*.car"
 }
-
 
