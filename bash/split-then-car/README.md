@@ -1,4 +1,4 @@
-# data-preparation-tool
+# split-then-car
 
 The script `split-then-car.sh`, splits large files into smaller chunks, generates CAR files, calculates commP and then persists metadata into a csv.
 It does so in the following order:
