@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-source /utils/splitter.sh
+source ./utils/splitter.sh
 
 fetch_commp() {
   OUTPUT=$1

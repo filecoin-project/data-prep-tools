@@ -2,10 +2,10 @@
 
 # Source helper functions
 
-source /utils/file_utils.sh
-source /utils/splitter.sh
-source /utils/car_generators.sh
-source /utils/deal_param_utils.sh
+source ../utils/file_utils.sh
+source ../utils/splitter.sh
+source ../utils/car_generators.sh
+source ../utils/deal_param_utils.sh
 
 ## Main flow
 
