@@ -31,7 +31,6 @@ echo
 echo "Generating car files for files larger than "$SIZE
 find_large_files ${SIZE}"c" | xargs -I {} bash -c "${CAR_GENERATOR} {}"
 find_large_car_files ${SIZE}"c" | xargs -I {} bash -c "${CAR_SPLITTER} {} $SIZE && rm {}"
-#find_large_car_files ${SIZE}"c" | xargs rm 
 
 # Calculate commP for all car files
 echo "Calculating CommP for all files and writing them out to "$METADATA_FILE
