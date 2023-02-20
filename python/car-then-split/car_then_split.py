@@ -5,12 +5,17 @@ from car_splitters import Carbites
 from commp_calculators import StreamCommP
 
 
-class CarThenSplit():
-    def __init__(self, car_generator, car_splitter, commp_calculator):
-        self.car_generator = car_generator
-        self.car_splitter = car_splitter
-        self.commp_calculator = commp_calculator
-
-
 if __name__ == '__main__':
-    car_then_split = CarThenSplit(IpldGoCar, Carbites, StreamCommP)
+    car_generator = IpldGoCar()
+    car_splitter = Carbites()
+    commp_calculator = StreamCommP()
+
+    # Get all files to be processed using derivermodule
+
+    # Generate car files for all the items
+
+    # Split all car files that are larger than a given size
+
+    # Calculate commP for all files
+
+    # Persist source_file -> (list of car files, corresponding commP) locally
