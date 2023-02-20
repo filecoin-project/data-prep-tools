@@ -1,5 +1,6 @@
 data/
 *.swp
 *.car
+.idea
 
 cleanup.sh
