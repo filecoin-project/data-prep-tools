@@ -19,7 +19,7 @@ export -f fetch_padded_piece_size
 run_stream_commp() {
   FILE=$1
   echo "Calculating commp for $FILE using stream-commp"
-  output=$(cat $FILE | stream-commp 2>&1)
+  output=$(cat $FILE | stream-commp -d 2>&1)
 
   commp=$(fetch_commp "$output")
   padded_piece_size=$(fetch_padded_piece_size "$output")
