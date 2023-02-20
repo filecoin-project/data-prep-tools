@@ -15,4 +15,4 @@ class Carbites(CarSplitter):
         self.splitter = splitter
 
     def split_car(self, source_file, size):
-        check_call([self.splitter, 'split', '--size', size, source_file])
+        check_call([self.splitter, 'split', '--size', str(size), source_file])

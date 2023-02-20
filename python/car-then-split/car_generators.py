@@ -23,4 +23,4 @@ class IpldGoCar(CarGenerator):
         self.generator = generator
 
     def generate_car(self, source_file, output_file):
-        check_call([self.generator, 'c', '--version', '1', output_file, source_file])
+        check_call([self.generator, 'create', '--version', '1', '-f', output_file, source_file])
