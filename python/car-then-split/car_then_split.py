@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
 
+import csv
 import glob
 import os.path
-import subprocess
 from datetime import datetime
-import csv
 
 from car_generators import IpldGoCar
 from car_splitters import Carbites
