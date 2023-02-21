@@ -25,6 +25,7 @@ class StreamCommP(CommPCalculator):
             corrupt_re = re.compile('\*CORRUPTED\*')
             padded_piece_re = re.compile('Padded piece:\s+(\d+)\sbytes')
             unpadded_piece_re = re.compile('Unpadded piece:\s+(\d+)\sbytes')
+
             commp_m = commp_re.findall(out)
             corrupt = corrupt_re.match(out)
             padded_piece_m = padded_piece_re.findall(out)
