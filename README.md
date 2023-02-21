@@ -9,7 +9,8 @@ They are organised according to the implementation language -- shell scripts are
 - [split-then-car](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/split-then-car)
 - [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/car-then-split)
 
-
+## Python
+- [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/python/car-then-split)
 
 ## Other tools in the ecosystem
 
