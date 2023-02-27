@@ -2,7 +2,7 @@
 
 These are a bunch of tools that could be used to prepare data in order to store it on [Filecoin](https://filecoin.io).
 
-They are organised according to the implementation language -- shell scripts are in `bash` etc.
+They are organised according to the implementation language -- shell scripts are in `bash` directory, python scripts in `python` directory etc.
 
 ## Bash
 
