@@ -5,9 +5,10 @@ import glob
 import os.path
 from datetime import datetime
 
-from car_generators import IpldGoCar
-from car_splitters import Carbites
-from commp_calculators import StreamCommP
+from dataprep_tools.car_generators import IpldGoCar
+from dataprep_tools.car_splitters import Carbites
+from dataprep_tools.commp_calculators import StreamCommP
+
 
 
 class CarThenSplit:
