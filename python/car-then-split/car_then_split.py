@@ -3,18 +3,18 @@
 import csv
 import glob
 import os.path
+import shutil
 from datetime import datetime
 
-from dataprep_tools.car_generators import IpldGoCar
+from dataprep_tools.car_generators import IpfsCar
 from dataprep_tools.car_splitters import Carbites
 from dataprep_tools.commp_calculators import StreamCommP
 
 
-
 class CarThenSplit:
 
-    def __init__(self, data_dir, chunk_size, car_generator=IpldGoCar(),
-                 car_splitter=Carbites(), commp_calculator=StreamCommP()):
+    def __init__(self, data_dir, chunk_size, car_generator,
+                 car_splitter, commp_calculator):
         self.data_dir = data_dir
         self.chunk_size = chunk_size
         self.car_generator = car_generator
@@ -36,8 +36,10 @@ class CarThenSplit:
             if os.path.isfile(file):
                 yield file
 
-    def generate_car(self, file):
-        self.car_generator.generate_car(file, file + ".car")
+    def generate_car(self, file, output=None):
+        if not output:
+            output = file + ".car"
+        self.car_generator.generate_car(file, output)
 
     def split_car(self, file):
         self.car_splitter.split_car(file, self.chunk_size)
@@ -52,31 +54,27 @@ if __name__ == '__main__':
     car_then_split = CarThenSplit(
         data_dir=data_dir,
         chunk_size=1000000000,
-        car_generator=IpldGoCar("/Users/anjor/repos/go_workspace/bin/car"),
+        car_generator=IpfsCar(),
         car_splitter=Carbites("/Users/anjor/repos/alanshaw/go-carbites/cmd/carbites"),
         commp_calculator=StreamCommP()
     )
 
+    car_file = "data.car"
+
+    car_then_split.generate_car(data_dir, car_file)
+    shutil.move(car_file, data_dir)
     os.chdir(data_dir)
 
-    small_files = car_then_split.find_small_files()
-    for small_file in small_files:
-        car_then_split.generate_car(small_file)
+    car_then_split.split_car(car_file)
+    os.unlink(car_file)
 
-    large_files = car_then_split.find_large_files()
-    for large_file in large_files:
-        car_then_split.generate_car(large_file)
-
-        large_car_file = large_file + ".car"
-        car_then_split.split_car(large_car_file)
-        os.unlink(large_car_file)
-
-    car_files = car_then_split.find_car_files()
     f = open(metadata_file, 'w')
     writer = csv.writer(f)
+    writer.writerow(["timestamp", "original data", "car file", "piece cid", "padded piece size"])
+    car_files = car_then_split.find_car_files()
     for car_file in car_files:
         deal_params = car_then_split.calculate_deal_params(car_file)
-        row = [datetime.now(), car_file, deal_params['commp'], deal_params['padded_piece']]
+        row = [datetime.now(), data_dir, car_file, deal_params['commp'], deal_params['padded_piece']]
 
         writer.writerow(row)
 
