@@ -13,9 +13,9 @@ from dataprep_tools.commp_calculators import StreamCommP
 
 class CarThenSplit:
 
-    def __init__(self, data_dir, chunk_size, car_generator,
+    def __init__(self, data, chunk_size, car_generator,
                  car_splitter, commp_calculator):
-        self.data_dir = data_dir
+        self.data_dir = data
         self.chunk_size = chunk_size
         self.car_generator = car_generator
         self.car_splitter = car_splitter
@@ -52,7 +52,7 @@ if __name__ == '__main__':
     data_dir = "/Users/anjor/repos/anjor/filecoin_data_prep_tools/data"
     metadata_file = os.path.join(data_dir, "__metadata.csv")
     car_then_split = CarThenSplit(
-        data_dir=data_dir,
+        data=data_dir,
         chunk_size=1000000000,
         car_generator=IpfsCar(),
         car_splitter=Carbites("/Users/anjor/repos/alanshaw/go-carbites/cmd/carbites"),
