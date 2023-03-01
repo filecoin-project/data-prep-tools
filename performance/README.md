@@ -7,6 +7,11 @@ dd if=/dev/urandom of=4G-payload.bin bs=1M count=4096
 ```
 etc.
 
+The scripts in the scripts directory were used to benchmark as follows:
+```
+find . -name "*.bin" | xargs -I {} bash -c "echo {} && time ./generate-car-prep.sh {} && echo"
+```
+
 All of the benchmarks were carried out on a M1 Macbook Pro (8-core, 32G ram).
 
 ## Car generation
