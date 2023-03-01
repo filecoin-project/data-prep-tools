@@ -21,4 +21,4 @@ and might be better suited for the specific circumstances.
 - https://github.com/banyancomputer/dataprep -- this tool handles encryption, compression, deduping and chunking. The output of this tool could then be carred etc and used for deal making.
 
 ### Go
-- https://github.com/tech-greedy/go-generate-car
+- https://github.com/tech-greedy/go-generate-car -- this tool generates car files and calculates commp at the same time.
