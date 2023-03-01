@@ -1,10 +1,15 @@
 #!/usr/bin/env bash
 
-# Source helper functions
+# This is an example driver script to generate car files, split them if necessary and
+# calculate commp in order to prepare data for filecoin deals.
 
+# Source helper functions
 source ../utils/file_utils.sh
-source ../utils/car_utils.sh
-source ../utils/deal_param_utils.sh
+
+# Source filecoin related utilities
+source ../utils/car_generators.sh
+source ../utils/car_splitters.sh
+source ../utils/commp_calculators.sh
 
 
 # Main flow
@@ -13,8 +18,10 @@ SIZE=$2
 WORKDIR=$(pwd)
 METADATA_FILE="__metadata.csv"
 
+# Choose data preparation utilities
 CAR_GENERATOR="ipld_go_car"
 CAR_SPLITTER="carbites"
+COMMP_CALCULATOR="stream_commp"
 
 
 chdir $DATADIR
@@ -34,7 +41,7 @@ find_large_car_files ${SIZE}"c" | xargs -I {} bash -c "${CAR_SPLITTER} {} $SIZE 
 
 # Calculate commP for all car files
 echo "Calculating CommP for all files and writing them out to "$METADATA_FILE
-find_all_car_files | xargs -I {} bash -c "run_stream_commp {}" > "$METADATA_FILE"
+find_all_car_files | xargs -I {} bash -c "${COMMP_CALCULATOR} {}" > "$METADATA_FILE"
 
 echo "Finished processing files"
 
