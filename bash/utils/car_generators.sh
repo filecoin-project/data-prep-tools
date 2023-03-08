@@ -8,11 +8,9 @@ ipld_go_car() {
 }
 export -f ipld_go_car
 
-stream_dagger() {
+ipfs_car() {
   FILE=$1
-  echo "Generating car file for $FILE using stream-dagger" 
-  cat $FILE | /Users/anjor/repos/ribasushi/DAGger/bin/stream-dagger --ipfs-add-compatible-command="--cid-version=1" --emit-stdout=car-v0-pinless-stream > ${FILE}.car
-  echo "Done generating car file for $FILE using stream-dagger"
+  echo "Generating car file for $FILE using ipfs-car"
+  ipfs-car --wrapWithDirectory false --pack $FILE --output ${FILE}.car
 }
-export -f stream_dagger
 
