@@ -44,7 +44,7 @@ if __name__ == '__main__':
     car_then_split = CarThenSplit(
         data=data_dir,
         chunk_size=1000000000,
-        car_generator=IpldGoCar(),
+        car_generator=IpldGoCar(), # IpldGoCar's generate_car function can take in a glob as data_dir
         car_splitter=Carbites("/Users/anjor/repos/alanshaw/go-carbites/cmd/carbites"),
         commp_calculator=StreamCommP()
     )
