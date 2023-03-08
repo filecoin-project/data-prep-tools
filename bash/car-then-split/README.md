@@ -4,7 +4,7 @@ The script `car-then-split.sh`, generates CAR files, then splits large car files
 
 It does so in the following order:
 
-  1. Generates [CAR files](https://ipld.io/specs/transport/car/) for each of those smaller chunks.
+  1. Generates [CAR files](https://ipld.io/specs/transport/car/) for all files.
   2. Splits large car files into smaller car files using [carbites](https://github.com/alanshaw/go-carbites).
   3. Calculates [CommP (piece cid)](https://spec.filecoin.io/systems/filecoin_files/piece/) for each of the generated car files.
   4. Persists metadata about original file, partial file (if split), CommP and padded piece size to a csv file, which can then be used to make storage deals on filecoin.

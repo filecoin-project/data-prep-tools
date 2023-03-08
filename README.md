@@ -6,8 +6,8 @@ They are organised according to the implementation language -- shell scripts are
 
 ## Bash
 
-- [split-then-car](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/split-then-car)
 - [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/car-then-split)
+- :warning: [DO NOT USE, here for legacy reasons] [split-then-car](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/split-then-car)
 
 ## Python
 - [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/python/car-then-split)
