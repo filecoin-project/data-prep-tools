@@ -6,7 +6,7 @@ import os.path
 import shutil
 from datetime import datetime
 
-from dataprep_tools.car_generators import IpfsCar
+from dataprep_tools.car_generators import IpldGoCar
 from dataprep_tools.car_splitters import Carbites
 from dataprep_tools.commp_calculators import StreamCommP
 
@@ -20,16 +20,6 @@ class CarThenSplit:
         self.car_generator = car_generator
         self.car_splitter = car_splitter
         self.commp_calculator = commp_calculator
-
-    def find_small_files(self):
-        for file in glob.glob(self.data_dir + "**/**", recursive=True):
-            if os.path.isfile(file) and os.path.getsize(file) <= self.chunk_size:
-                yield file
-
-    def find_large_files(self):
-        for file in glob.glob(self.data_dir + "**/**", recursive=True):
-            if os.path.isfile(file) and os.path.getsize(file) > self.chunk_size:
-                yield file
 
     def find_car_files(self):
         for file in glob.glob(self.data_dir + "**/*.car", recursive=True):
@@ -54,7 +44,7 @@ if __name__ == '__main__':
     car_then_split = CarThenSplit(
         data=data_dir,
         chunk_size=1000000000,
-        car_generator=IpfsCar(),
+        car_generator=IpldGoCar(),
         car_splitter=Carbites("/Users/anjor/repos/alanshaw/go-carbites/cmd/carbites"),
         commp_calculator=StreamCommP()
     )
