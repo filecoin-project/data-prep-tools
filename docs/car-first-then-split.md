@@ -28,7 +28,8 @@ In the following illustration we have made the following assumptions:
 
 The dag for the full 6 MB data looks like:
 
-<insert image here>
+![Screenshot 2023-03-09 at 11 38 04 AM](https://user-images.githubusercontent.com/1911631/224341004-88b0b06c-5375-4631-bba4-b03cdc228e02.png)
+
 
 each of the leaf nodes (bafy1, bafy2 and bafy3 are 2 MB each).
 
@@ -38,7 +39,7 @@ each of the leaf nodes (bafy1, bafy2 and bafy3 are 2 MB each).
 If we split the car file in a way that maintains the dags, but just puts blocks in
 different car files, for instance by using a library like [go-carbites](https://github.com/alanshaw/go-carbites), then we get the following picture:
 
-<insert image here>
+![Screenshot 2023-03-10 at 2 23 51 PM](https://user-images.githubusercontent.com/1911631/224341086-6ae7c82b-26f8-42e9-be5c-165fd8ff33fc.png)
 
 where `bafy0`, `bafy1` and `bafy2` are in one car file, and `bafy3` is in another car files, and therefore in separate deals.
 
@@ -48,7 +49,7 @@ However, because the client knows the cid `bafy0` they can easily retrieve their
 
 Whereas if we split the file first and then generate car files, we get the following picture:
 
-<insert image here>
+![Screenshot 2023-03-09 at 11 36 39 AM](https://user-images.githubusercontent.com/1911631/224341239-a3f29e70-fb64-425e-847a-2ab2c927d130.png)
 
 Note that now the user has 2 payload cids associated with their single dataset — `bafy0-a` and `bafy0-b`. In fact `bafy0` won't even get computed at all because the dag is split, and cids are calculated “bottom up”.
 
@@ -57,6 +58,6 @@ To retrieve their full data, the user now needs to (1) maintain the mapping from
 ## Lessons and additional thoughts
 
 
-- Maintaining the dag structure is important for retrievals, because it encodes how the separate blocks are logically related.
+- Maintaining the dag structure is important for retrievals, because it encodes how the separate blocks are logically related. In the above illustration, whether or not the integrity of `bafy0` is preserved has a signifcant impact on the retrieval UX.
 - Retrieval over bitswap, i.e., one block at a time means it doesn’t matter if the blocks are spread across multiple deals. As long as the dag structure is there, data is still retrievable.
 - This wasn’t discussed in detail in the above example, however, splitting files before CAR also prevents range requests (over http for example). This is because if a request is made that spans over the two separate DAGs, there is no way to respond to it.
