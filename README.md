@@ -36,3 +36,7 @@ and might be better suited for the specific circumstances.
 ## Performance Benchmarks
 
 Find some performance benchmarks [here](./performance).
+
+## Lead Maintainer
+
+[Anjor](https://github.com/anjor)
