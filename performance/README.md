@@ -28,5 +28,6 @@ This benchmark only measured time for car generation.
 
 This benchmark measured time for car generation + commp calculation. In case of tools like [ipfs-car](https://github.com/web3-storage/ipfs-car) and [go-car](https://github.com/ipld/go-car), the resulting car file was streamed to [stream-commp](https://github.com/filecoin-project/go-fil-commp-hashhash) to calculate commp, whereas [generate-car](https://github.com/tech-greedy/generate-car) does both at once. [delta](https://github.com/application-research/delta) calculates commp but does not generate car file.
 
+![Car generation + commp calculation performance_ 20230311](https://user-images.githubusercontent.com/1911631/224290636-79e3f4c5-8b90-4759-91e0-0aebab64a7ac.png)
 
-![Car generation + commp calculation performance (2)](https://user-images.githubusercontent.com/1911631/222276892-187d6e2f-985f-4878-be3d-50ac14050e79.png)
+
