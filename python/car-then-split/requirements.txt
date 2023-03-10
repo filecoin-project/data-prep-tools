@@ -1,4 +1,4 @@
-pip==22.3.1
-setuptools==65.6.0
+pip==23.0.1
+setuptools==67.6.0
 wheel==0.38.4
-dataprep-tools==0.0.1
+dataprep-tools==0.0.2
