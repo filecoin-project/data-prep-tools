@@ -13,4 +13,6 @@ ipfs_car() {
   echo "Generating car file for $FILE using ipfs-car"
   ipfs-car --wrapWithDirectory false --pack $FILE --output ${FILE}.car
 }
+export -f ipfs_car
+
 
