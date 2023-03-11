@@ -27,6 +27,7 @@ and might be better suited for the specific circumstances.
 
 ### Go
 - https://github.com/tech-greedy/generate-car -- this tool generates car files and calculates commp at the same time.
+- https://github.com/anjor/go-carbites-commp -- this tool splits up an existing car file into smaller car files and calculates commp at the same time.
 
 ### Python
 - https://github.com/anjor/dataprep_tools -- this is a pypi package that encodes the basic
