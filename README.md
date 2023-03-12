@@ -23,14 +23,14 @@ There are a few other tools in the ecosystem which may also be used for data pre
 and might be better suited for the specific circumstances.
 
 ### Rust
-- https://github.com/banyancomputer/dataprep -- this tool handles encryption, compression, deduping and chunking. The output of this tool could then be carred etc and used for deal making.
+- [banyancomputer/dataprep](https://github.com/banyancomputer/dataprep) -- this tool handles encryption, compression, deduping and chunking. The output of this tool could then be carred etc and used for deal making.
 
 ### Go
-- https://github.com/tech-greedy/generate-car -- this tool generates car files and calculates commp at the same time.
-- https://github.com/anjor/go-carbites-commp -- this tool splits up an existing car file into smaller car files and calculates commp at the same time.
+- [generate-car](https://github.com/tech-greedy/generate-car) -- this tool generates car files and calculates commp at the same time.
+- [carbites-commp](https://github.com/anjor/go-carbites-commp) -- this tool splits up an existing car file into smaller car files and calculates commp at the same time.
 
 ### Python
-- https://github.com/anjor/dataprep_tools -- this is a pypi package that encodes the basic
+- [dataprep_tools](https://github.com/anjor/dataprep_tools) -- this is a pypi package that encodes the basic
   steps in a data preparation pipeline. It is heavily used in the orchestrators written in
   python in this repository.
 
