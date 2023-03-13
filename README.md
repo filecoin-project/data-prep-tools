@@ -17,22 +17,50 @@ They are organised according to the implementation language -- shell scripts are
 ### Python
 - [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/python/car-then-split)
 
-## Other tools in the ecosystem
+## Tools in the ecosystem
 
-There are a few other tools in the ecosystem which may also be used for data preparation
-and might be better suited for the specific circumstances.
+There are a lot of tools in the ecosystem that address different aspects of the data
+onboarding pipeline. The following is a non-exhaustive list of these tools.
 
-### Rust
-- [banyancomputer/dataprep](https://github.com/banyancomputer/dataprep) -- this tool handles encryption, compression, deduping and chunking. The output of this tool could then be carred etc and used for deal making.
+### Car generators
 
-### Go
+#### Go
+- [ipld/go-car](https://github.com/ipld/go-car)
+
+
+#### JS
+- [ipfs-car](https://github.com/web3-storage/ipfs-car)
+- [ipfs-car (streaming)](https://github.com/web3-storage/ipfs-car2)
+
+### Car splitters
+
+#### Go
+- [go-carbites](https://github.com/alanshaw/go-carbites)
+
+#### JS
+- [carbites](https://github.com/nftstorage/carbites)
+
+### CommP calculators
+
+#### Go
+- [stream-commp](https://github.com/filecoin-project/go-fil-commp-hashhash)
+
+
+
+### Others
+
+#### Go
 - [generate-car](https://github.com/tech-greedy/generate-car) -- this tool generates car files and calculates commp at the same time.
 - [carbites-commp](https://github.com/anjor/go-carbites-commp) -- this tool splits up an existing car file into smaller car files and calculates commp at the same time.
 
-### Python
+#### Python
 - [dataprep_tools](https://github.com/anjor/dataprep_tools) -- this is a pypi package that encodes the basic
   steps in a data preparation pipeline. It is heavily used in the orchestrators written in
   python in this repository.
+
+#### Rust
+- [banyancomputer/dataprep](https://github.com/banyancomputer/dataprep) -- this tool handles encryption, compression, deduping and chunking. The output of this tool could then be carred etc and used for deal making.
+
 
 ## Performance Benchmarks
 
