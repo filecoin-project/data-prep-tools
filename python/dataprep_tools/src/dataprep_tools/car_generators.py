@@ -44,15 +44,10 @@ class Anelace(CarGenerator):
         self.root = None
 
     def generate_car(self, source_file, output_file):
-        generate_cmd=[
+        generate_cmd = [
             self.generator,
-            '--chunker=fixed-size_1048576',
-            '--collector=trickle_max-direct-leaves=4096_max-sibling-subgroups=8',
-            '--inline-max-size=36',
-            '--hash=sha2-256',
-            '--node-encoder=unixfsv1_merkledag-compat-protobuf',
-            '--emit-stdout=car-v1-stream',
-            '--emit-stderr=roots-jsonl'
+            '--emit-stderr=roots-jsonl',
+            '--emit-stdout=car-v1-stream'
         ]
         with open(source_file, 'r') as inp:
             with open(output_file, 'w') as car:
