@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "dataprep_tools"
-version = "0.0.7"
+version = "0.0.8"
 authors = [
     {name="Anjor"}
 ]
@@ -12,6 +12,5 @@ description = "Utils to prepare data for filecoin deals"
 readme = "README.md"
 classifiers = [
     "Programming Language :: Python :: 3",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
