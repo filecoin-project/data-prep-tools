@@ -44,9 +44,6 @@ onboarding pipeline. The following is a non-exhaustive list of these tools.
 - [carbites-commp](https://github.com/anjor/go-carbites-commp) -- this tool splits up an existing car file into smaller car files and calculates commp at the same time.
 
 #### Python
-- [dataprep_tools](https://github.com/anjor/dataprep_tools) -- this is a pypi package that encodes the basic
-  steps in a data preparation pipeline. It is heavily used in the orchestrators written in
-  python in this repository.
 
 #### Rust
 - [banyancomputer/dataprep](https://github.com/banyancomputer/dataprep) -- this tool handles encryption, compression, deduping and chunking. The output of this tool could then be carred etc and used for deal making.
@@ -55,11 +52,23 @@ onboarding pipeline. The following is a non-exhaustive list of these tools.
 
 ### Bash
 
-- [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/car-then-split)
-- :warning: [DO NOT USE, here for legacy reasons] [split-then-car](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/split-then-car)
+#### Modules
+- [dataprep_tools](./bash/dataprep_tools) -- shell scripts that encode basic steps in a data prepration pipeline.
+
+#### Orchestrators
+
+- [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/car-then-split) -- this tool first generates a car file, then splits it into smaller car files.
+- :warning: [DO NOT USE, here for legacy reasons]
+  [split-then-car](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/split-then-car) -- this tool first splits a large file into smaller files, then generates car files for each of the split files.
 
 ### Python
-- [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/python/car-then-split)
+
+#### Modules
+- [dataprep_tools](./python/dataprep_tools) -- this is a pypi package that encodes the basic steps in a data preparation pipeline. 
+
+
+#### Orchestrators
+- [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/python/car-then-split) -- this tool first generates a car file, then splits it into smaller car files. 
 
 
 ## Performance Benchmarks
