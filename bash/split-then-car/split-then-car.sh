@@ -4,13 +4,13 @@
 # calculate commp in order to prepare data for filecoin deals.
 
 # Source helper functions
-source ../utils/file_utils.sh
+source ../dataprep_tools/file_utils.sh
 source splitter.sh
 
 # Source filecoin related utilities
-source ../utils/car_generators.sh
-source ../utils/car_splitters.sh
-source ../utils/commp_calculators.sh
+source ../dataprep_tools/car_generators.sh
+source ../dataprep_tools/car_splitters.sh
+source ../dataprep_tools/commp_calculators.sh
 
 
 ## Main flow
