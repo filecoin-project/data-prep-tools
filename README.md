@@ -14,38 +14,43 @@ onboarding pipeline. The following is a non-exhaustive list of these tools.
 
 ### Car generators
 
+> These tools generate car files.
+
 #### Go
 - [ipld/go-car](https://github.com/ipld/go-car)
+- [generate-car](https://github.com/tech-greedy/generate-car) -- this tool generates car files and calculates commp at the same time.
 
 
 #### JS
 - [ipfs-car](https://github.com/web3-storage/ipfs-car)
 - [ipfs-car (streaming)](https://github.com/web3-storage/ipfs-car2)
 
-### Car splitters
+---
+
+### Car splitters/joiners
+
+> These tools split large car files into smaller car files, or combine small large car files into a large car file.
 
 #### Go
 - [go-carbites](https://github.com/alanshaw/go-carbites)
+- [carbites-commp](https://github.com/anjor/go-carbites-commp) -- this tool splits up an existing car file into smaller car files and calculates commp at the same time.
+
 
 #### JS
 - [carbites](https://github.com/nftstorage/carbites)
+
+---
 
 ### CommP calculators
 
 #### Go
 - [stream-commp](https://github.com/filecoin-project/go-fil-commp-hashhash)
-
+- [carbites-commp](https://github.com/anjor/go-carbites-commp) -- this tool splits up an existing car file into smaller car files and calculates commp at the same time.
+- [generate-car](https://github.com/tech-greedy/generate-car) -- this tool generates car files and calculates commp at the same time.
 
 
 ### Others
 
-#### Go
-- [generate-car](https://github.com/tech-greedy/generate-car) -- this tool generates car files and calculates commp at the same time.
-- [carbites-commp](https://github.com/anjor/go-carbites-commp) -- this tool splits up an existing car file into smaller car files and calculates commp at the same time.
-
-#### Python
-
-#### Rust
 - [banyancomputer/dataprep](https://github.com/banyancomputer/dataprep) -- this tool handles encryption, compression, deduping and chunking. The output of this tool could then be carred etc and used for deal making.
 
 ## Tools/Orchestrators in this repository
@@ -60,6 +65,8 @@ onboarding pipeline. The following is a non-exhaustive list of these tools.
 - [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/car-then-split) -- this tool first generates a car file, then splits it into smaller car files.
 - :warning: [DO NOT USE, here for legacy reasons]
   [split-then-car](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/split-then-car) -- this tool first splits a large file into smaller files, then generates car files for each of the split files.
+
+---
 
 ### Python
 
