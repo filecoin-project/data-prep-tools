@@ -7,16 +7,6 @@ building blocks in order to build a full end-to-end data preparation pipeline.
 
 They are organised according to the implementation language -- shell scripts are in `bash` directory, python scripts in `python` directory etc.
 
-## Tools/Orchestrators in this repository
-
-### Bash
-
-- [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/car-then-split)
-- :warning: [DO NOT USE, here for legacy reasons] [split-then-car](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/split-then-car)
-
-### Python
-- [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/python/car-then-split)
-
 ## Tools in the ecosystem
 
 There are a lot of tools in the ecosystem that address different aspects of the data
@@ -60,6 +50,16 @@ onboarding pipeline. The following is a non-exhaustive list of these tools.
 
 #### Rust
 - [banyancomputer/dataprep](https://github.com/banyancomputer/dataprep) -- this tool handles encryption, compression, deduping and chunking. The output of this tool could then be carred etc and used for deal making.
+
+## Tools/Orchestrators in this repository
+
+### Bash
+
+- [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/car-then-split)
+- :warning: [DO NOT USE, here for legacy reasons] [split-then-car](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/split-then-car)
+
+### Python
+- [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/python/car-then-split)
 
 
 ## Performance Benchmarks
