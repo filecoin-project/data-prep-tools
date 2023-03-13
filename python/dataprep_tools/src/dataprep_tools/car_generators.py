@@ -63,11 +63,3 @@ class Anelace(CarGenerator):
 
     def get_root_cid(self, car_file):
         return self.root
-
-
-if __name__ == '__main__':
-    anelace = Anelace('/Users/anjor/repos/anjor/anelace/cmd/anelace/anelace')
-
-    anelace.generate_car('file.txt', 'file.txt.car')
-
-    print(anelace.get_root_cid('file.txt.car'))
