@@ -65,13 +65,13 @@ onboarding pipeline. The following is a non-exhaustive list of these tools.
 
 #### Bash
 
-- [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/car-then-split) -- this tool first generates a car file, then splits it into smaller car files.
+- [car-then-split](./orchestrators/bash/car-then-split) -- this tool first generates a car file, then splits it into smaller car files.
 - :warning: [DO NOT USE, here for legacy reasons]
-  [split-then-car](https://github.com/anjor/filecoin_data_prep_tools/tree/main/bash/split-then-car) -- this tool first splits a large file into smaller files, then generates car files for each of the split files.
+  [split-then-car](./orchestrators/bash/split-then-car) -- this tool first splits a large file into smaller files, then generates car files for each of the split files.
 
 #### Python
 
-- [car-then-split](https://github.com/anjor/filecoin_data_prep_tools/tree/main/python/car-then-split) -- this tool first generates a car file, then splits it into smaller car files. 
+- [car-then-split](./orchestrators/python/car-then-split) -- this tool first generates a car file, then splits it into smaller car files. 
 
 
 
