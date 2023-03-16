@@ -49,7 +49,9 @@ However, because the client knows the cid `bafy0` they can easily retrieve their
 
 Whereas if we split the file first and then generate car files, we get the following picture:
 
-![Screenshot 2023-03-09 at 11 36 39 AM](https://user-images.githubusercontent.com/1911631/224341239-a3f29e70-fb64-425e-847a-2ab2c927d130.png)
+![Screenshot 2023-03-16 at 5 33 43 PM](https://user-images.githubusercontent.com/1911631/225704844-77943735-793d-4d91-a6bd-cd026d2b35d2.png)
+
+
 
 Note that now the user has 2 payload cids associated with their single dataset — `bafy0-a` and `bafy0-b`. In fact `bafy0` won't even get computed at all because the dag is split, and cids are calculated “bottom up”.
 
