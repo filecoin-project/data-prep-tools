@@ -36,7 +36,20 @@ So now the steps to make a deal are:
 2. Car splitting
 3. CommP calculation
 
+### Small files
 
+Even though the storage protocol does not prevent a deal for a very small file, it is not
+economically feasible for a storage provider to accept such a deal. Therefore in case the
+client has a lot of small files it would be beneficial for them to aggregate these files
+into a larger file before making a filecoin deal. There are [car joining
+tools](./car-splitters-joiners.md) that can combine multiple small car files into a large
+car file.
+
+So now the steps to make a deal are:
+
+1. Car generation
+2. Car joining
+3. CommP calculation
 
 ## Data preparation best practices
 
