@@ -4,9 +4,18 @@ import re
 
 
 class CommPCalculator(ABC):
+    """
+    A CommP Calculator calculates commP aka piece cid in order to make filecoin deals.
+    """
 
     @abstractmethod
     def calculate_commp(self, source_file):
+        """
+        Main function to calculate commP.
+
+        :param source_file: Source car file to calculate commP for.
+        :return: a dict with commp, padded piece size and unpadded piece size. The keys are "commp", "padded_piece" and "unpadded_piece"
+        """
         pass
 
 
