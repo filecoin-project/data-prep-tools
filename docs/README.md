@@ -42,6 +42,6 @@ So now the steps to make a deal are:
 
 1. [Car first, then split](./car-first-then-split.md)
 
-[^dataRepresentation] [Data representation section from the filecoin spec.](https://spec.filecoin.io/#section-systems.filecoin_files.piece.data-representation)
-[^sector] At the time of the writing 32GiB and 64GiB sectors are supported, but 32GiB
+[^dataRepresentation]: [Data representation section from the filecoin spec.](https://spec.filecoin.io/#section-systems.filecoin_files.piece.data-representation)
+[^sector]: At the time of the writing 32GiB and 64GiB sectors are supported, but 32GiB
 sectors are more common.
