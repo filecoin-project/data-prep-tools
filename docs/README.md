@@ -6,7 +6,7 @@
 
 In order to store data on the filecoin network, the data needs to be
 represented[^dataRepresentation] in a specific way. 
-The raw data needs to be transformed into what is called a
+Namely, the raw data needs to be transformed into what is called a
 [Filecoin piece](https://spec.filecoin.io/#section-systems.filecoin_files.piece) -- this
 is the main _unit of negotiation_ of data on the filecoin network.
 
