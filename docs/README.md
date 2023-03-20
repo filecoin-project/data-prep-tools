@@ -2,7 +2,7 @@
 
 ## Overview of the storage mechanism
 
-Step 1: [Car generation](./car-generators.md)
+*Step 1: [Car generation](./car-generators.md)*
 
 In order to store data on the filecoin network, the data needs to be
 represented[^dataRepresentation] in a specific way. 
@@ -11,7 +11,8 @@ The raw data needs to be transformed into what is called a
 is the main _unit of negotiation_ of data on the filecoin network.
 
 
-Step 2: [CommP calculation](./commp-calculators.md)
+*Step 2: [CommP calculation](./commp-calculators.md)*
+
 Afer the data has been transformed into the CAR format, the piece cid or the CommP needs to be calculated. The
 commP and the piece size is included in the [deal proposal](https://github.com/filecoin-project/go-state-types/blob/master/builtin/v9/market/deal.go#L202)
 made by the client. 
