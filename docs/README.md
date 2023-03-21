@@ -54,7 +54,8 @@ So now the steps to make a deal are:
 
 ## Data preparation best practices
 
-1. [Car first, then split](./best-practices/car-first-then-split.md)
+1. [Data preparation and retrieval patterns](./best-practices/data-preparation-and-retrieval.md)
+2. [Car first, then split](./best-practices/car-first-then-split.md)
 
 [^dataRepresentation]: [Data representation section from the filecoin spec.](https://spec.filecoin.io/#section-systems.filecoin_files.piece.data-representation)
 [^sector]: At the time of the writing 32GiB and 64GiB sectors are supported, but 32GiB
