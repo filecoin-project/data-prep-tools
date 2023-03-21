@@ -28,7 +28,7 @@ In the following illustration we have made the following assumptions:
 
 The dag for the full 6 MB data looks like:
 
-![Screenshot 2023-03-09 at 11 38 04 AM](https://user-images.githubusercontent.com/1911631/224341004-88b0b06c-5375-4631-bba4-b03cdc228e02.png)
+![dag](../images/dag.png)
 
 
 each of the leaf nodes (bafy1, bafy2 and bafy3 are 2 MB each).
@@ -39,7 +39,7 @@ each of the leaf nodes (bafy1, bafy2 and bafy3 are 2 MB each).
 If we split the car file in a way that maintains the dags, but just puts blocks in
 different car files, for instance by using a library like [go-carbites](https://github.com/alanshaw/go-carbites), then we get the following picture:
 
-![Screenshot 2023-03-10 at 2 23 51 PM](https://user-images.githubusercontent.com/1911631/224341086-6ae7c82b-26f8-42e9-be5c-165fd8ff33fc.png)
+![car-first-then-split-dag](../images/car-then-split-dag.png)
 
 where `bafy0`, `bafy1` and `bafy2` are in one car file, and `bafy3` is in another car files, and therefore in separate deals.
 
@@ -49,7 +49,7 @@ However, because the client knows the cid `bafy0` they can easily retrieve their
 
 Whereas if we split the file first and then generate car files, we get the following picture:
 
-![Screenshot 2023-03-16 at 5 33 43 PM](https://user-images.githubusercontent.com/1911631/225704844-77943735-793d-4d91-a6bd-cd026d2b35d2.png)
+![split-then-car-dag.png](../images/split-then-car-dag.png)
 
 
 
