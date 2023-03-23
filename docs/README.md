@@ -10,6 +10,7 @@ Namely, the raw data needs to be transformed into what is called a
 [Filecoin piece](https://spec.filecoin.io/#section-systems.filecoin_files.piece) -- this
 is the main _unit of negotiation_ of data on the filecoin network.
 
+![onboarding-pipeline](./images/onboarding-pipeline.png)
 
 *Step 2: [CommP calculation](./tools/commp-calculators.md)*
 
@@ -19,8 +20,9 @@ made by the client.
 
 
 At a basic level these two steps are all that's required from the client in order to store
-data on the filecoin network. However, as we will find out in the next couple of sections
-there are situations that require further transformation steps.
+data on the filecoin network. However, depending on the size of the data to be onboarded
+additional transformations could be required. In the next two sections we discuss how to
+handle large files[^largeFiles] and small files[^smallFiles].
 
 ### Large files
 
@@ -52,11 +54,18 @@ So now the steps to make a deal are:
 2. Car joining
 3. CommP calculation
 
+## FAQs
+1. [Paylod cid vs Piece cid](./payload-piece-cid.md)
+
 ## Data preparation best practices
 
 1. [Data preparation and retrieval patterns](./best-practices/data-preparation-and-retrieval.md)
 2. [Car first, then split](./best-practices/car-first-then-split.md)
 
 [^dataRepresentation]: [Data representation section from the filecoin spec.](https://spec.filecoin.io/#section-systems.filecoin_files.piece.data-representation)
+[^largeFiles]: Files larger than the sector size.
 [^sector]: At the time of the writing 32GiB and 64GiB sectors are supported, but 32GiB
 sectors are more common.
+[^smallFiles]: From a storage provider standpoint, a deal becomes economically viable only
+for data scales above a certain threshold. As a result if the files to be stored are too
+small, they need special handling.
