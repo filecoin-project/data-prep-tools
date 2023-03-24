@@ -1,41 +1,26 @@
-# Data preparation tools for Filecoin
+# Data preparation for Filecoin
 
-These are a bunch of tools that could be used to prepare data in order to store it on [Filecoin](https://filecoin.io).
+This repository contains information about everything related to data preparation that is
+required before onboarding data to [Filecoin](https://filecoin.io). This includes tooling,
+documentation, and performance benchmarks.
 
-These tools are more akin to "orchestrators", i.e., they use other existing tools as
-building blocks in order to build a full end-to-end data preparation pipeline.
+The repository is split into 4 main sections:
 
-They are organised according to the implementation language -- shell scripts are in `bash` directory, python scripts in `python` directory etc.
-
-
-
-## Tools/Orchestrators in this repository
-
-### Modules
-- [dataprep_tools-bash](./modules/dataprep_tools-bash) -- shell scripts that encode basic steps in a data prepration pipeline.
-- [dataprep_tools-py](./modules/dataprep_tools-py) -- this is a pypi package that encodes the basic steps in a data preparation pipeline. 
-
-### Orchestrators
-
-#### Bash
-
-- [car-then-split](./orchestrators/bash/car-then-split) -- this tool first generates a car file, then splits it into smaller car files.
-- :warning: [DO NOT USE, here for legacy reasons]
-  [split-then-car](./orchestrators/bash/split-then-car) -- this tool first splits a large file into smaller files, then generates car files for each of the split files.
-
-#### Python
-
-- [car-then-split](./orchestrators/python/car-then-split) -- this tool first generates a car file, then splits it into smaller car files. 
+1. [Docs](./docs): this section includes documentation explaining how data onboarding to
+filecoin works, best practices and common pitfalls.
+2. [Modules](./modules): the different data onboarding steps are encoded as modules
+(written in python and bash) which could be easily imported and used in any data
+onboarding pipeline.
+3. [Orchestrators](./orchestrators): these are example scripts demonstrating how to import
+and use the modules from the [modules section](./modules) to orchestrate data onboarding.
+4. [Performance benchmarks](./performance): these include performance benchmarks for
+different available tools.
 
 
 ## Other tools in the ecosystem
 
 - [banyancomputer/dataprep](https://github.com/banyancomputer/dataprep) -- this tool handles encryption, compression, deduping and chunking. The output of this tool could then be carred etc and used for deal making.
 
-
-## Performance Benchmarks
-
-Find some performance benchmarks [here](./performance).
 
 ## Lead Maintainer
 
