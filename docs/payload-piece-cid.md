@@ -1,6 +1,6 @@
 # Payload vs Piece CID
 
-The difference between a payload CID and a piece CID causes a lot of confusion. 
+The difference between a payload CID and a piece CID causes a lot of confusion. This writeup is an attempt at addressing some of that confusion.
 
 When data is represented as as a [merkle
 dag](https://docs.ipfs.tech/concepts/merkle-dag/), the content identifier (CID) associated
