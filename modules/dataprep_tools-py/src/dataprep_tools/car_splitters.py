@@ -29,3 +29,18 @@ class Carbites(CarSplitter):
 
     def split_car(self, source_file, size):
         check_call([self.splitter, 'split', '--size', str(size), source_file])
+
+
+class Carlet(CarSplitter):
+    """
+    Carlet is a car splitter implemented in go.
+
+    Source: https://github.com/anjor/carlet
+    """
+
+    def __init__(self, splitter='carlet'):
+        self.splitter = splitter
+
+    def split_car(self, source_file, size):
+        with open(source_file, 'r') as car_file:
+            check_call([self.splitter, 'split', '--size', size, '--output', source_file], stdin=source_file)
