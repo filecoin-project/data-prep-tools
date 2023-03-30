@@ -43,4 +43,4 @@ class Carlet(CarSplitter):
 
     def split_car(self, source_file, size):
         with open(source_file, 'r') as car_file:
-            check_call([self.splitter, 'split', '--size', size, '--output', source_file], stdin=car_file)
+            check_call([self.splitter, 'split', '--size', str(size), '--output', source_file], stdin=car_file)
