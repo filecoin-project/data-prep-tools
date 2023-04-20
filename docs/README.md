@@ -55,7 +55,7 @@ So now the steps to make a deal are:
 3. CommP calculation
 
 ## FAQs
-1. [Paylod cid vs Piece cid](./payload-piece-cid.md)
+1. [Payload cid vs Piece cid](./payload-piece-cid.md)
 
 ## Data preparation best practices
 
