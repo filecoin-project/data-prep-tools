@@ -14,7 +14,7 @@ is the main _unit of negotiation_ of data on the filecoin network.
 
 *Step 2: [CommP calculation](./tools/commp-calculators.md)*
 
-Afer the data has been transformed into the CAR format, the piece cid or the CommP needs to be calculated. The
+Afer the data has been transformed into an IPLD dag and serialised into the CAR format, the piece cid or the CommP needs to be calculated. The
 commP and the piece size is included in the [deal proposal](https://github.com/filecoin-project/go-state-types/blob/master/builtin/v9/market/deal.go#L202)
 made by the client. 
 
