@@ -7,7 +7,8 @@ documentation, and performance benchmarks.
 The repository is split into 4 main sections:
 
 1. [Docs](./docs): this section includes documentation explaining how data onboarding to
-filecoin works, best practices and common pitfalls.
+filecoin works, best practices and common pitfalls. It also contains links to available
+tools in the ecosystem.
 2. [Modules](./modules): the different data onboarding steps are encoded as modules
 (written in python and bash) which could be easily imported and used in any data
 onboarding pipeline.
